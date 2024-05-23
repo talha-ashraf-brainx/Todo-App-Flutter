@@ -6,7 +6,7 @@ part of 'todos_api.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$todosApiHash() => r'1267258f986b4bf47806c5660924c694f6cbac10';
+String _$todosApiHash() => r'aaff32ede67dce05be00db2e4b97cfcc744809a8';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -29,11 +29,10 @@ class _SystemHash {
   }
 }
 
-abstract class _$TodosApi
-    extends BuildlessAutoDisposeAsyncNotifier<TodosResponse> {
+abstract class _$TodosApi extends BuildlessAutoDisposeNotifier<void> {
   late final ApiManager apiManager;
 
-  FutureOr<TodosResponse> build(
+  void build(
     ApiManager apiManager,
   );
 }
@@ -43,7 +42,7 @@ abstract class _$TodosApi
 const todosApiProvider = TodosApiFamily();
 
 /// See also [TodosApi].
-class TodosApiFamily extends Family<AsyncValue<TodosResponse>> {
+class TodosApiFamily extends Family<void> {
   /// See also [TodosApi].
   const TodosApiFamily();
 
@@ -81,8 +80,7 @@ class TodosApiFamily extends Family<AsyncValue<TodosResponse>> {
 }
 
 /// See also [TodosApi].
-class TodosApiProvider
-    extends AutoDisposeAsyncNotifierProviderImpl<TodosApi, TodosResponse> {
+class TodosApiProvider extends AutoDisposeNotifierProviderImpl<TodosApi, void> {
   /// See also [TodosApi].
   TodosApiProvider(
     ApiManager apiManager,
@@ -112,7 +110,7 @@ class TodosApiProvider
   final ApiManager apiManager;
 
   @override
-  FutureOr<TodosResponse> runNotifierBuild(
+  void runNotifierBuild(
     covariant TodosApi notifier,
   ) {
     return notifier.build(
@@ -137,8 +135,7 @@ class TodosApiProvider
   }
 
   @override
-  AutoDisposeAsyncNotifierProviderElement<TodosApi, TodosResponse>
-      createElement() {
+  AutoDisposeNotifierProviderElement<TodosApi, void> createElement() {
     return _TodosApiProviderElement(this);
   }
 
@@ -156,13 +153,13 @@ class TodosApiProvider
   }
 }
 
-mixin TodosApiRef on AutoDisposeAsyncNotifierProviderRef<TodosResponse> {
+mixin TodosApiRef on AutoDisposeNotifierProviderRef<void> {
   /// The parameter `apiManager` of this provider.
   ApiManager get apiManager;
 }
 
 class _TodosApiProviderElement
-    extends AutoDisposeAsyncNotifierProviderElement<TodosApi, TodosResponse>
+    extends AutoDisposeNotifierProviderElement<TodosApi, void>
     with TodosApiRef {
   _TodosApiProviderElement(super.provider);
 

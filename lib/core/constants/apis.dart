@@ -3,6 +3,6 @@ class Apis {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
       };
-  static const String baseUrl = "https://dummyjson.com/todos";
+  static const String baseUrl = "https://dummyjson.com";
   static const String getTodos = "$baseUrl/todos";
 }
