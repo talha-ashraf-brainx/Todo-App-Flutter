@@ -4,4 +4,5 @@ class Apis {
         'Accept': 'application/json',
       };
   static const String baseUrl = "https://dummyjson.com/todos";
+  static const String getTodos = "$baseUrl/todos";
 }
